@@ -7,6 +7,23 @@
     <title>Food and Drink Randomizer</title>
 </head>
 <body>
-    <h1>Food and Drink Randomizer!</h1>
+    <header>
+
+        <h1>Food and Drink Randomizer!</h1>
+
+    </header>
+
+    <section>
+
+        <h2>Let US decide what you have to eat and drink tonight!</h2>
+
+        <p>
+            We're all busy people with jobs, and hobbies, and family that take up some of our time, so who has time to think of things like what they should make on a given night?</p>
+        </p>
+
+        <p>
+            That's why we have done all the work for you! By simply selecting between food or drink (or both!) we will select an alcoholic beverage and a meal for you to enjoy so all you have to worry about is ingredients!
+        </p>
+    </section>
 </body>
 </html>

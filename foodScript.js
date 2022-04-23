@@ -14,10 +14,10 @@ function writeDrinkTitle() {
       let beverage;
       beverage = data.drinks[0];
 
-      for (var i = 1; i <= 20; i++) {
+      for (var i = 1; i <= 15; i++) {
         ingredients1.push(beverage['strIngredient' + i.toString()])
       }
-      for (var i = 1; i <= 20; i++) {
+      for (var i = 1; i <= 15; i++) {
         measurements1.push(beverage['strMeasure' + i.toString()])
       }
 

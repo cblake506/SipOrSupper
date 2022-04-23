@@ -85,3 +85,8 @@ function main() {
 }
 
 main();
+
+var getFoodAndDrink = document.getElementById('get_both');
+
+getFoodAndDrink.addEventListener("click", writeDrinkTitle);
+getFoodAndDrink.addEventListener("click", writeMealTitle);

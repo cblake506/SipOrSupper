@@ -64,9 +64,19 @@ function writeMealTitle() {
       for (var i = 1; i <= 20; i++) {
         measurements.push(dinner['strMeasure' + i.toString()])
       }
-
+      
       document.getElementById("title").innerHTML = "<div>" + dinner.strMeal + "</div>";
-      document.getElementById("results").innerHTML = '<ul id="foodList"></ul>';
+      
+      if(dinner.strYoutube !== ""){
+        firstHalfStr = '<ul id="foodList"></ul><iframe src="https://www.youtube.com//embed/';
+        youtubeUrl = dinner.strYoutube.replace('https://www.youtube.com/watch?v=', "")
+        youtubeUrl = youtubeUrl.slice(0, 11);
+        secondHalfStr = '"></iframe>'
+        console.log(firstHalfStr + youtubeUrl + secondHalfStr)
+        document.getElementById("results").innerHTML = firstHalfStr + youtubeUrl + secondHalfStr;
+      }
+      
+      
 
       for (let i = 0; i < ingredients.length; i++) {
         if (ingredients[i] !== "" && ingredients[i] !== null) {

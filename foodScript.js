@@ -15,32 +15,31 @@ function writeDrinkTitle() {
       beverage = data.drinks[0];
 
       for (var i = 1; i <= 20; i++) {
-        ingredients1.push(beverage['strIngredient1' + i.toString()])
+        ingredients1.push(beverage['strIngredient' + i.toString()])
       }
       for (var i = 1; i <= 20; i++) {
-        measurements1.push(beverage['strMeasure1' + i.toString()])
+        measurements1.push(beverage['strMeasure' + i.toString()])
       }
 
-        document.getElementById("title1").innerHTML = "<div>"+beverage.strDrink+"</div>";
-        document.getElementById("results1").innerHTML = '<ul id="drinkList"></ul>';
+      document.getElementById("title1").innerHTML = "<div>" + beverage.strDrink + "</div>";
+      document.getElementById("results1").innerHTML = '<ul id="drinkList"></ul>';
 
-        for (let i = 0; i < ingredients1.length; i++) {
-          if (ingredients1[i] !== "" && ingredients1[i] !== null) {
-            let listElIngredients1 = document.createElement("li");
-            listElIngredients1.innerHTML = measurements1[i] + " " + ingredients1[i];
-            document.getElementById("drinkList").appendChild(listElIngredients1);
-          }
+      for (let i = 0; i < ingredients1.length; i++) {
+        if (ingredients1[i] !== "" && ingredients1[i] !== null) {
+          let listElIngredients = document.createElement("li");
+          listElIngredients.innerHTML = measurements1[i] + " " + ingredients1[i];
+          document.getElementById("drinkList").appendChild(listElIngredients);
         }
+      }
     });
 }
 
-function main() {
+function main1() {
   buttonEl = document.getElementById("get_drink");
   buttonEl.addEventListener("click", writeDrinkTitle)
 }
 
-main();
-
+main1();
 
 
 function writeMealTitle() {
@@ -66,16 +65,16 @@ function writeMealTitle() {
         measurements.push(dinner['strMeasure' + i.toString()])
       }
 
-        document.getElementById("title").innerHTML = "<div>"+dinner.strMeal+"</div>";
-        document.getElementById("results").innerHTML = '<ul id="foodList"></ul>';
+      document.getElementById("title").innerHTML = "<div>" + dinner.strMeal + "</div>";
+      document.getElementById("results").innerHTML = '<ul id="foodList"></ul>';
 
-        for (let i = 0; i < ingredients.length; i++) {
-          if (ingredients[i] !== "" && ingredients[i] !== null) {
-            let listElIngredients = document.createElement("li");
-            listElIngredients.innerHTML = measurements[i] + " " + ingredients[i];
-            document.getElementById("foodList").appendChild(listElIngredients);
-          }
+      for (let i = 0; i < ingredients.length; i++) {
+        if (ingredients[i] !== "" && ingredients[i] !== null) {
+          let listElIngredients = document.createElement("li");
+          listElIngredients.innerHTML = measurements[i] + " " + ingredients[i];
+          document.getElementById("foodList").appendChild(listElIngredients);
         }
+      }
     });
 }
 
@@ -85,6 +84,3 @@ function main() {
 }
 
 main();
-
-
-

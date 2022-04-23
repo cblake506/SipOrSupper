@@ -84,3 +84,10 @@ function main() {
 }
 
 main();
+
+function getBoth () {
+  buttonEl = document.getElementById("get_both");
+  buttonEl = addEventListener("click", writeDrinkTitle);
+  buttonEl = addEventListener("click", writeMealTitle)
+}
+getBoth();

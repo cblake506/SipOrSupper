@@ -23,6 +23,7 @@ function writeDrinkTitle() {
 
       document.getElementById("title1").innerHTML = "<div>" + beverage.strDrink + "</div>";
       document.getElementById("results1").innerHTML = '<ul id="drinkList"></ul>';
+      document.getElementById("drink-image").setAttribute('src', beverage.strDrinkThumb);
 
       for (let i = 0; i < ingredients1.length; i++) {
         if (ingredients1[i] !== "" && ingredients1[i] !== null) {

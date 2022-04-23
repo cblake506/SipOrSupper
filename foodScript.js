@@ -67,15 +67,29 @@ function writeMealTitle() {
       }
       
       document.getElementById("title").innerHTML = "<div>" + dinner.strMeal + "</div>";
+      document.getElementById("results").innerHTML = '<ul id="foodList"></ul>'
       
       if(dinner.strYoutube !== ""){
-        firstHalfStr = '<ul id="foodList"></ul><iframe src="https://www.youtube.com//embed/';
-        youtubeUrl = dinner.strYoutube.replace('https://www.youtube.com/watch?v=', "")
+        //html embeded youtube video format
+        firstHalfStr = '<iframe src="https://www.youtube.com//embed/';
+        secondHalfStr = '"></iframe>';
+
+        //extract the 11 digit video ID from the full link provided in the API
+        //remove the start of the URL
+        youtubeUrl = dinner.strYoutube.replace('https://www.youtube.com/watch?v=', "");
+        //only keep the 11 digit ID and none of the additional identifiers
         youtubeUrl = youtubeUrl.slice(0, 11);
-        secondHalfStr = '"></iframe>'
+
         console.log(firstHalfStr + youtubeUrl + secondHalfStr)
-        document.getElementById("results").innerHTML = firstHalfStr + youtubeUrl + secondHalfStr;
+        document.getElementById("results").insertAdjacentHTML('beforeend', firstHalfStr + youtubeUrl + secondHalfStr);
       }
+
+      //remove non-standard characters from the instructions
+      cleanInstructions = dinner.strInstructions.replace(/[\u{0080}-\u{FFFF}]/gu,"");
+      //display the instructions
+      document.getElementById("results").insertAdjacentHTML('beforeend', '<h3> Instructions </h3>');
+      document.getElementById("results").insertAdjacentHTML('beforeend', '<p>' + cleanInstructions + '<p>');
+
       
       
 

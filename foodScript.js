@@ -87,7 +87,8 @@ function writeMealTitle() {
       //remove non-standard characters from the instructions
       cleanInstructions = dinner.strInstructions.replace(/[\u{0080}-\u{FFFF}]/gu,"");
       //display the instructions
-      document.getElementById("results").insertAdjacentHTML('afterbegin', cleanInstructions);
+      document.getElementById("results").insertAdjacentHTML('beforeend', '<h3> Instructions </h3>');
+      document.getElementById("results").insertAdjacentHTML('beforeend', '<p>' + cleanInstructions + '<p>');
 
       
       

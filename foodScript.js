@@ -1,3 +1,7 @@
+$('.ui.basic.modal')
+  .modal('show')
+;
+
 function writeDrinkTitle() {
   fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php', {
     // The browser fetches the resource from the remote server without first looking in the cache.

@@ -1,6 +1,6 @@
 var ageValid = localStorage.getItem('ageValid');
 
-if(!ageValid){
+if(!ageValid || ageValid === 'false'){
   $('.ui.basic.modal')
     .modal('show')
   ;
@@ -9,11 +9,11 @@ $('#ageFalse').on('click', setAgeFalse);
 $('#ageTrue').on('click', setAgeTrue);
 
 function setAgeFalse() {
-  localStorage.setItem('ageValid', false);
+  localStorage.setItem('ageValid', 'false');
   return;
 }
 function setAgeTrue() {
-  localStorage.setItem('ageValid', true);
+  localStorage.setItem('ageValid', 'true');
   return;
 }
 

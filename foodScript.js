@@ -1,6 +1,21 @@
-$('.ui.basic.modal')
-  .modal('show')
-;
+var ageValid = localStorage.getItem('ageValid');
+
+if(!ageValid){
+  $('.ui.basic.modal')
+    .modal('show')
+  ;
+}
+$('#ageFalse').on('click', setAgeFalse);
+$('#ageTrue').on('click', setAgeTrue);
+
+function setAgeFalse() {
+  localStorage.setItem('ageValid', false);
+  return;
+}
+function setAgeTrue() {
+  localStorage.setItem('ageValid', true);
+  return;
+}
 
 function writeDrinkTitle() {
   fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php', {

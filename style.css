@@ -1,0 +1,9 @@
+.banner {
+  width: 45%;
+  height: 380px;
+  background-size: cover;
+}
+body {
+    background-color: #f5efd7;
+    text-align: center;
+}

@@ -7,3 +7,11 @@ body {
     background-color: #f5efd7;
     text-align: center;
 }
+
+#drink-image {
+  height: 250px;
+}
+
+#dinner-image {
+  height: 250px;
+}

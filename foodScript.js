@@ -72,6 +72,7 @@ function writeMealTitle() {
       
       document.getElementById("title").innerHTML = "<div>" + dinner.strMeal + "</div>";
       document.getElementById("results").innerHTML = '<ul id="foodList"></ul>'
+      document.getElementById("dinner-image").setAttribute('src', dinner.strMealThumb);
       
       if(dinner.strYoutube !== ""){
         //html embeded youtube video format

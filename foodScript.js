@@ -44,6 +44,11 @@ function writeDrinkTitle() {
       document.getElementById("results1").innerHTML = '<ul id="drinkList"></ul>';
       document.getElementById("drink-image").setAttribute('src', beverage.strDrinkThumb);
 
+      cleanInstructions1 = beverage.strInstructions;
+      //display the instructions
+      document.getElementById("results1").insertAdjacentHTML('beforeend', '<h3> Instructions </h3>');
+      document.getElementById("results1").insertAdjacentHTML('beforeend', '<p>' + cleanInstructions1 + '<p>');
+
       for (let i = 0; i < ingredients1.length; i++) {
         if (ingredients1[i] !== "" && ingredients1[i] !== null) {
           let listElIngredients = document.createElement("li");
@@ -53,6 +58,7 @@ function writeDrinkTitle() {
       }
     });
 }
+
 
 function main1() {
   buttonEl = document.getElementById("get_drink");

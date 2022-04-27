@@ -15,3 +15,7 @@ body {
 #dinner-image {
   height: 250px;
 }
+
+.drink-section {
+  display: none;
+}

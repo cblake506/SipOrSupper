@@ -4,6 +4,8 @@ if(!ageValid || ageValid === 'false'){
   $('.ui.basic.modal')
     .modal('show')
   ;
+} else{
+  $('.drink-section').css('display', 'block');
 }
 $('#ageFalse').on('click', setAgeFalse);
 $('#ageTrue').on('click', setAgeTrue);
@@ -14,6 +16,7 @@ function setAgeFalse() {
 }
 function setAgeTrue() {
   localStorage.setItem('ageValid', 'true');
+  $('.drink-section').css('display', 'block');
   return;
 }
 

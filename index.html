@@ -12,14 +12,19 @@
     crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-    <img class = "banner" src="https://user-images.githubusercontent.com/101071816/165204576-b7345f2c-eba1-4801-a55a-0e462d0bc835.png" alt="logo"/>
+    <img class = "banner" 
+        src="https://user-images.githubusercontent.com/101071816/165204576-b7345f2c-eba1-4801-a55a-0e462d0bc835.png" 
+        width="500"
+		height="500"
+        alt="logo"
+    />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="ui basic modal">
         <div class="ui icon header">
           <i class="address card outline icon"></i>
-          Age Verification!!
+          Please verify your age
         </div>
         <div class="content">
           <p>Are you over the age of 21?</p>
@@ -61,8 +66,8 @@
             </div>
 
         <h2>
-            <button class="button-primary" id="get_drink">Get Drink!</button>
-            <button class="button-primary" id="get_both">Get Both!</button>
+            <button class="button-primary drink-section-button" id="get_drink">Get Drink!</button>
+            <button class="button-primary drink-section-button" id="get_both">Get Both!</button>
             <button class="button-primary" id="get_dinner">Get Dinner!</button>
         </h2>
         
@@ -70,9 +75,8 @@
     </section>
 
     <div class="ui grid">
-
     <div class="eight wide column">
-        <section>
+        <section class="drink-section">
             <h3>Get a random drink by clicking above!</h3>
             <a href="real-image.png"  target="blank"><img src="" id="drink-image"/></a>
             
@@ -97,12 +101,11 @@
             <div id="title"></div>
             <div id="results"></div>
         </div>
-    </section>
     </div>
 
 <div class="ui two column centered grid">
     <div class="eight wide column">
-    <section>
+    <section class="drink-section">
         
         <h3>
             Get both a random drink and dinner by clicking above!

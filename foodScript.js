@@ -6,6 +6,7 @@ if(!ageValid || ageValid === 'false'){
   ;
 } else{
   $('.drink-section').css('display', 'block');
+  $('.drink-section-button').css('display', 'inline-block');
 }
 $('#ageFalse').on('click', setAgeFalse);
 $('#ageTrue').on('click', setAgeTrue);
@@ -17,6 +18,7 @@ function setAgeFalse() {
 function setAgeTrue() {
   localStorage.setItem('ageValid', 'true');
   $('.drink-section').css('display', 'block');
+  $('.drink-section-button').css('display', 'inline-block');
   return;
 }
 

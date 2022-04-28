@@ -1,17 +1,74 @@
-.banner {
-  width: 40%;
-  height: 250px;
-  background-size: cover;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+	font-family: 'Roboto', sans-serif;
 }
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 body {
-    background-color: #f5efd7;
-    text-align: center;
+	background-color: #f5efd7;
+	text-align: center;
 }
 
-#drink-image {
-  height: 250px;
+.button-primary {
+  padding: 8px 30px;
+	border-radius: 5px;
+	background: #333333;
+	color: #fff;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	max-width: 250px;
 }
 
-#dinner-image {
-  height: 250px;
+.app-description {
+  margin: 10px auto;
+	border-radius: 8px;
+	max-width: 822px;
+	padding: 0px 20px;
+}
+
+.ui-grid {
+  display: flex; 
+  margin-top: 3rem; 
+  max-width: 1400px; 
+  margin: auto
+}
+
+.eight-wide-column {
+  display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 2rem;
+}
+
+.get_drink {
+  padding: 8px 30px;
+	border-radius: 5px;
+	background: #333333;
+	color: #fff;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	max-width: 250px;
+}
+
+.get_dinner {
+  padding: 8px 30px;
+  border-radius: 5px;
+  background: #333333;
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  max-width: 250px;
+}
+
+h3 {
+  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	line-height: 1.28571429em;
+	margin: calc(2rem - 0.14285714em) 0 1rem;
+	font-weight: 700;
+	padding: 0;
 }

@@ -4,6 +4,9 @@ if(!ageValid || ageValid === 'false'){
   $('.ui.basic.modal')
     .modal('show')
   ;
+} else{
+  $('.drink-section').css('display', 'block');
+  $('.drink-section-button').css('display', 'inline-block');
 }
 $('#ageFalse').on('click', setAgeFalse);
 $('#ageTrue').on('click', setAgeTrue);
@@ -14,6 +17,8 @@ function setAgeFalse() {
 }
 function setAgeTrue() {
   localStorage.setItem('ageValid', 'true');
+  $('.drink-section').css('display', 'block');
+  $('.drink-section-button').css('display', 'inline-block');
   return;
 }
 
@@ -42,6 +47,7 @@ function writeDrinkTitle() {
 
       document.getElementById("title1").innerHTML = "<div>" + beverage.strDrink + "</div>";
       document.getElementById("results1").innerHTML = '<ul id="drinkList"></ul>';
+      document.getElementById("drink-image").insertAdjacentHTML('afterend', '<br>')
       document.getElementById("drink-image").setAttribute('src', beverage.strDrinkThumb);
 
       cleanInstructions1 = beverage.strInstructions;
@@ -93,6 +99,7 @@ function writeMealTitle() {
       
       document.getElementById("title").innerHTML = "<div>" + dinner.strMeal + "</div>";
       document.getElementById("results").innerHTML = '<ul id="foodList"></ul>'
+      document.getElementById("dinner-image").insertAdjacentHTML('afterend', '<br>')
       document.getElementById("dinner-image").setAttribute('src', dinner.strMealThumb);
       
       if(dinner.strYoutube !== ""){

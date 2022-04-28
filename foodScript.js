@@ -45,6 +45,7 @@ function writeDrinkTitle() {
 
       document.getElementById("title1").innerHTML = "<div>" + beverage.strDrink + "</div>";
       document.getElementById("results1").innerHTML = '<ul id="drinkList"></ul>';
+      document.getElementById("drink-image").insertAdjacentHTML('afterend', '<br>')
       document.getElementById("drink-image").setAttribute('src', beverage.strDrinkThumb);
 
       cleanInstructions1 = beverage.strInstructions;
@@ -96,6 +97,7 @@ function writeMealTitle() {
       
       document.getElementById("title").innerHTML = "<div>" + dinner.strMeal + "</div>";
       document.getElementById("results").innerHTML = '<ul id="foodList"></ul>'
+      document.getElementById("dinner-image").insertAdjacentHTML('afterend', '<br>')
       document.getElementById("dinner-image").setAttribute('src', dinner.strMealThumb);
       
       if(dinner.strYoutube !== ""){

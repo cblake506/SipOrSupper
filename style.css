@@ -60,3 +60,7 @@ h1 {
   max-width: 822px;
   padding: 0px 20px;
 }
+
+.drink-section, .drink-section-button {
+	display: none;
+}

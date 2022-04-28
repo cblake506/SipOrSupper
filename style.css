@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
 * {
-	font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.banner {
+  width: 35%;
+  height: 225px;
+  background-size: cover;
 }
 
 img {
@@ -14,61 +19,50 @@ body {
 	text-align: center;
 }
 
+#drink-image {
+  height: 250px;
+  box-shadow: 5px 5px black;
+  border-radius: 25px;
+}
+
+#dinner-image {
+  height: 250px;
+  box-shadow: 5px 5px black;
+  border-radius: 25px;
+
+}
+
 .button-primary {
-  padding: 8px 30px;
-	border-radius: 5px;
-	background: #333333;
-	color: #fff;
-	font-size: 20px;
-	font-family: 'Roboto', sans-serif;
-	max-width: 250px;
-}
-
-.app-description {
-  margin: 10px auto;
-	border-radius: 8px;
-	max-width: 822px;
-	padding: 0px 20px;
-}
-
-.ui-grid {
-  display: flex; 
-  margin-top: 3rem; 
-  max-width: 1400px; 
-  margin: auto
-}
-
-.eight-wide-column {
-  display: flex;
-	flex-direction: row;
-	justify-content: center;
-	margin-top: 2rem;
-}
-
-.get_drink {
-  padding: 8px 30px;
-	border-radius: 5px;
-	background: #333333;
-	color: #fff;
-	font-size: 20px;
-	font-family: 'Roboto', sans-serif;
-	max-width: 250px;
-}
-
-.get_dinner {
-  padding: 8px 30px;
+  padding: 5px;
+  background-color: #333333;
   border-radius: 5px;
-  background: #333333;
-  color: #fff;
-  font-size: 20px;
-  font-family: 'Roboto', sans-serif;
-  max-width: 250px;
+  color: white;
+  border-color: white;
+  transition-duration: 0.4s;
+  width: 350px;
 }
 
-h3 {
-  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-	line-height: 1.28571429em;
-	margin: calc(2rem - 0.14285714em) 0 1rem;
-	font-weight: 700;
-	padding: 0;
+
+
+.button-primary:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 8px 10px 12px;
+}
+
+.button-primary {background-image: linear-gradient(to right, #333333 0%, #707066 51%, #333333 100%)}
+.button-primary:hover { background-position: right center; }
+
+ul {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+.description {
+  margin: 10px auto;
+  border-radius: 8px;
+  max-width: 822px;
+  padding: 0px 20px;
 }

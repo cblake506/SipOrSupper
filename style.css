@@ -1,17 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-<<<<<<< HEAD
-
-* {
-	font-family: 'Roboto', sans-serif;
-}
-
-img {
-	max-width: 100%;
-	height: auto;
-}
-
-=======
->>>>>>> 8c2752f55dddc9cd4bcb10636671bc0f94e7ff43
 * {
     font-family: 'Roboto', sans-serif;
 }
@@ -26,50 +13,6 @@ body {
     text-align: center;
 }
 
-<<<<<<< HEAD
-.ui-grid {
-  display: flex; 
-  margin-top: 3rem; 
-  max-width: 1400px; 
-  margin: auto
-}
-
-.eight-wide-column {
-  display: flex;
-	flex-direction: row;
-	justify-content: center;
-	margin-top: 2rem;
-}
-
-.get_drink {
-  padding: 8px 30px;
-	border-radius: 5px;
-	background: #333333;
-	color: #fff;
-	font-size: 20px;
-	font-family: 'Roboto', sans-serif;
-	max-width: 250px;
-}
-
-.get_dinner {
-  padding: 8px 30px;
-  border-radius: 5px;
-  background: #333333;
-  color: #fff;
-  font-size: 20px;
-  font-family: 'Roboto', sans-serif;
-  max-width: 250px;
-}
-
-h3 {
-  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-	line-height: 1.28571429em;
-	margin: calc(2rem - 0.14285714em) 0 1rem;
-	font-weight: 700;
-	padding: 0;
-}
-=======
->>>>>>> 8c2752f55dddc9cd4bcb10636671bc0f94e7ff43
 #drink-image {
   height: 250px;
   box-shadow: 5px 5px black;
@@ -178,14 +121,7 @@ h1 {
   font-size: 25px;
   text-transform: uppercase;
 }
-<<<<<<< HEAD
-=======
 
 .drink-section, .drink-section-button {
 	display: none;
 }
-<<<<<<< HEAD
->>>>>>> 8c2752f55dddc9cd4bcb10636671bc0f94e7ff43
-=======
-
->>>>>>> 82271110579d45f85c127c124893bcb98ef3bd40

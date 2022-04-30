@@ -1,20 +1,29 @@
+function clearStorage(){
+  localStorage.removeItem("ageValid")
+}
+clearStorage();
+
 var ageValid = localStorage.getItem("ageValid");
 if (!ageValid || ageValid === "false") {
   $(".ui.basic.modal").modal("show");
+  document.getElementById("food-box").className = "ui center aligned twelve wide column drink-column";
 } else {
-  $(".drink-section").css("display", "block");
+  $("#drink-section").css("display", "block");
   $(".drink-section-button").css("display", "inline-block");
+  document.getElementById("food-box").className = "ui center aligned six wide column drink-column";
 }
 $("#ageFalse").on("click", setAgeFalse);
 $("#ageTrue").on("click", setAgeTrue);
 function setAgeFalse() {
   localStorage.setItem("ageValid", "false");
+  document.getElementById("food-box").className = "ui center aligned twelve wide column drink-column";
   return;
 }
 function setAgeTrue() {
   localStorage.setItem("ageValid", "true");
-  $(".drink-section").css("display", "block");
+  $("#drink-section").css("display", "block");
   $(".drink-section-button").css("display", "inline-block");
+  document.getElementById("food-box").className = "ui center aligned six wide column drink-column";
   return;
 }
 function writeDrinkTitle() {
@@ -79,6 +88,7 @@ function writeMealTitle() {
     })
     .then(function (data) {
       console.log(data.meals);
+      console.log(data.meals[0].strYoutube)
       let ingredients = [];
       let measurements = [];
       let dinner;

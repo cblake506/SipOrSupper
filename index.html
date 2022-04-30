@@ -62,20 +62,21 @@
             </div>
         <h2>
             <button class="button-primary drink-section-button" id="get_drink">Get Drink!</button>
-            <button class="button-primary drink-section-button" id="get_both">Get Both!</button>
+            <button class="button-primary drink-section-button" id="get_both" style="display: none;">Get Both!</button>
             <button class="button-primary" id="get_dinner">Get Dinner!</button>
         </h2>
         <br/>
     </section>
     <div class="ui two column centered grid">
-        <div class="ui center aligned six wide column drink-column">
-            <section class="drink-section">
+        
+        <div class="ui center aligned six wide column drink-column" id="drink-section" style="display: none;">
+            <section class="drink-sec>
                 <a href="real-image.png"  target="blank"><img src="" id="drink-image"/></a>
                 <div id="title1"></div>
                 <div id="drink-results"></div>
             </section>
         </div>
-        <div class="ui center aligned six wide column aligned food-column">
+        <div class="ui center aligned six wide column aligned food-column" id="food-box">
             <section id="food-section">
                 <a href="real-image.png"  target="blank"><img src="" id="dinner-image"/></a>
                 <div id="title"></div>

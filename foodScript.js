@@ -1,20 +1,24 @@
 var ageValid = localStorage.getItem("ageValid");
 if (!ageValid || ageValid === "false") {
   $(".ui.basic.modal").modal("show");
+  document.getElementById("food-box").className = "ui center aligned twelve wide column drink-column";
 } else {
-  $(".drink-section").css("display", "block");
+  $("#drink-section").css("display", "block");
   $(".drink-section-button").css("display", "inline-block");
+  document.getElementById("food-box").className = "ui center aligned six wide column drink-column";
 }
 $("#ageFalse").on("click", setAgeFalse);
 $("#ageTrue").on("click", setAgeTrue);
 function setAgeFalse() {
   localStorage.setItem("ageValid", "false");
+  document.getElementById("food-box").className = "ui center aligned twelve wide column drink-column";
   return;
 }
 function setAgeTrue() {
   localStorage.setItem("ageValid", "true");
-  $(".drink-section").css("display", "block");
+  $("#drink-section").css("display", "block");
   $(".drink-section-button").css("display", "inline-block");
+  document.getElementById("food-box").className = "ui center aligned six wide column drink-column";
   return;
 }
 function writeDrinkTitle() {
@@ -27,7 +31,6 @@ function writeDrinkTitle() {
       return response.json();
     })
     .then(function (data) {
-      console.log(data.drinks);
       let ingredients1 = [];
       let measurements1 = [];
       let beverage;
@@ -78,7 +81,6 @@ function writeMealTitle() {
       return response.json();
     })
     .then(function (data) {
-      console.log(data.meals);
       let ingredients = [];
       let measurements = [];
       let dinner;
@@ -101,19 +103,14 @@ function writeMealTitle() {
         firstHalfStr = '<iframe src="https://www.youtube.com//embed/';
         secondHalfStr = '"></iframe>';
         //extract the 11 digit video ID from the full link provided in the API
-        //remove the start of the URL
-        youtubeUrl = dinner.strYoutube.replace(
-          "https://www.youtube.com/watch?v=",
-          ""
-        );
         //only keep the 11 digit ID and none of the additional identifiers
-        youtubeUrl = youtubeUrl.slice(0, 11);
-        console.log(firstHalfStr + youtubeUrl + secondHalfStr);
+        videoID = dinner.strYoutube.slice(32,43);
+
         document
           .getElementById("results")
           .insertAdjacentHTML(
             "beforeend",
-            firstHalfStr + youtubeUrl + secondHalfStr
+            firstHalfStr + videoID + secondHalfStr
           );
       }
       //remove non-standard characters from the instructions

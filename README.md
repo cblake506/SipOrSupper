@@ -14,4 +14,4 @@ Our website will implement the following user story:
 ![Yellow and Black Fun Modern Restaurant Food Logo](https://user-images.githubusercontent.com/100721142/164916134-6be6c9af-65d1-45ca-a665-ec93b49e0f72.png)
 
 ## Link to Website
-https://natenelson28.github.io/SipOrSupper/
+https://cblake506.github.io/SipOrSupper/
